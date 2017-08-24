@@ -190,6 +190,7 @@ class GlideImageService
             'defaults' => $this->getDefaults(),
             'presets' => $this->getPresets(),
             'watermarks' => \Storage::disk( $this->getWatermarksDisk() )->getDriver(),
+            'cache_with_file_extensions' => true
         ];
     }
 
