@@ -175,6 +175,11 @@ class GlideImageService
             ];
         }
 
+        if( !array_key_exists( 'fm', $parameters ) && !pathinfo( $this->getSourceFile(), PATHINFO_EXTENSION ) )
+        {
+            $parameters[ 'fm' ] = 'jpg';
+        }
+
         return (array) $parameters;
     }
 
